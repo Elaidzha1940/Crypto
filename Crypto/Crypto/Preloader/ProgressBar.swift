@@ -24,7 +24,7 @@ struct ProgressBar: View {
         .padding()
         .onTapGesture {
             
-            self.percent = 0.58
+            self.percent = 1.0
         }
         .animation(.spring())
     }
@@ -32,7 +32,9 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar()
+        self.devices {
+            ProgressBar()
+        }
     }
 }
 
@@ -45,7 +47,7 @@ struct CustomProgressBar : View {
         ZStack(alignment: .leading) {
             
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
-                    //.fill(Color.gray)
+                .foregroundColor(Color(toElement: .progressgrey))
                     .frame(height: 24)
                 
                 
@@ -53,7 +55,7 @@ struct CustomProgressBar : View {
             
             ZStack(alignment: .trailing) {
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
-                    //.fill(Color.green)
+                    .foregroundColor(Color(toElement: .progress))
                     .frame(height: 24)
                     .frame(width: self.calPercent(), height: 24)
                 
