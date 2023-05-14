@@ -31,7 +31,7 @@ public extension PreviewProvider {
             content()
                 .preferredColorScheme(.light)
                 .previewDevice(PreviewDevice(rawValue: PreviewProviderOption.iPhone14ProMax.rawValue))
-                .previewDisplayName("\(PreviewProviderOption.iPhone14ProMax.label) - Dark")
+                .previewDisplayName("\(PreviewProviderOption.iPhone14ProMax.label) - Light")
             content()
                 .preferredColorScheme(.dark)
                 .previewDevice(PreviewDevice(rawValue: PreviewProviderOption.iPhoneSE1st.rawValue))
@@ -39,7 +39,7 @@ public extension PreviewProvider {
             content()
                 .preferredColorScheme(.light)
                 .previewDevice(PreviewDevice(rawValue: PreviewProviderOption.iPhoneSE1st.rawValue))
-                .previewDisplayName("\(PreviewProviderOption.iPhoneSE1st.label) - Dark")
+                .previewDisplayName("\(PreviewProviderOption.iPhoneSE1st.label) - Light")
         }
     }
     

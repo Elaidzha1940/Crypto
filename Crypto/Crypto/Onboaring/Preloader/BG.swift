@@ -14,6 +14,7 @@ import SwiftUI
 struct BG: View {
     var body: some View {
         
+        
         VStack {
             Circle()
                 .frame(width: 123, height: 123)
