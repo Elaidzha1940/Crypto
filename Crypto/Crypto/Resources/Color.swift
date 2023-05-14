@@ -1,0 +1,33 @@
+//  /*
+//
+//  Projecct: CryptoApp
+//  File: Resources.swift
+//  Created by: Elaidzha Shchukin
+//  Date:  14.05.2023
+//
+//
+//
+//  */
+
+import Foundation
+
+enum Resources {}
+
+extension Resources {
+
+    enum System: String, AssetConvertable {
+
+        case tabvawe, personhead, personbody
+    }
+
+    enum Icon: String, AssetConvertable {
+        
+        case some
+    }
+
+    enum Categories: String, AssetConvertable {
+        
+        case some
+
+    }
+}
