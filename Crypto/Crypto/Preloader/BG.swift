@@ -16,12 +16,18 @@ struct BG: View {
         
         VStack {
             Circle()
-                .frame(width: 150, height: 150)
+                .frame(width: 123, height: 123)
                 .foregroundColor(Color(toElement: .progress))
+                .offset(x: 70, y: 50)
+                .padding()
+            
+            Spacer()
             
             Circle()
-                .frame(width: 150, height: 150)
+                .frame(width: 123, height: 123)
                 .foregroundColor(Color(toElement: .bgred))
+                .offset(x: -70, y: -50)
+                .padding()
 
         }
     }

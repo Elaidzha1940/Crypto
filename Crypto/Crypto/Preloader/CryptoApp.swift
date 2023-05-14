@@ -1,9 +1,13 @@
+//  /*
 //
-//  CryptoApp.swift
-//  Crypto
+//  Project: Crypto
+//  File: CryptoApp.swift
+//  Created by: Elaidzha Shchukin
+//  Date: 14.05.2023
 //
-//  Created by Elaidzha Shchukin on 14.05.2023.
+//  Status: #In progress | #Decorated
 //
+//  */
 
 import SwiftUI
 
