@@ -13,10 +13,12 @@ import SwiftUI
 
 struct Fonts {
     struct Inter {
+        
         static let regular = "Inter-Regular"
         static let medium = "Inter-Medium"
         static let bold = "Inter-Bold"
+        static let extrabold = "Inter-ExtraBold"
+        static let semibold = "Inter-SemiBold" 
+        
     }
 }
-
-//    .font(custom(Fonts.Inter.regular, size: 17))

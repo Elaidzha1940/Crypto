@@ -22,7 +22,7 @@ extension Resources {
 
     enum Icon: String, AssetConvertable {
         
-        case number
+        case number, brasil, canada, china, colombia, kingdom, states, russia, spain, germany, france
     }
 
     enum Categories: String, AssetConvertable {

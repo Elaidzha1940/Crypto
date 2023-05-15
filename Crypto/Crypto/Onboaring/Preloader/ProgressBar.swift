@@ -46,12 +46,9 @@ struct CustomProgressBar : View {
         
         ZStack(alignment: .leading) {
             
-                RoundedRectangle(cornerRadius: 30, style: .continuous)
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
                 .foregroundColor(Color(toElement: .progressgrey))
-                    .frame(height: 24)
-                
-                
-           
+                .frame(height: 24)
             
             ZStack(alignment: .trailing) {
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
@@ -59,9 +56,9 @@ struct CustomProgressBar : View {
                     .frame(height: 24)
                     .frame(width: self.calPercent(), height: 24)
                 
-                Text(String(format: "%.0f", self.percent * 100))
-                    .font(.system(size: 16, weight: .bold))
-                    .padding()
+                Text(String(format: "%.0f", self.percent * 100) + "%")
+                    .font(.custom("Inter-ExtraBold", size: 16))
+                    .padding(10)
             }
         }
         .padding(18)
@@ -69,7 +66,7 @@ struct CustomProgressBar : View {
     
     func calPercent() -> CGFloat {
         
-        let width = UIScreen.main.bounds.width - 58
+        let width = UIScreen.main.bounds.width - 66
         
         return width * self.percent
     }

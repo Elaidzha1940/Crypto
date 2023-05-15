@@ -23,6 +23,7 @@ struct Notification: View {
             Button("Activate NOW") {
                 showAlert.toggle()
             }
+            .font(.custom("Inter-Bold", size: 18))
             .foregroundColor(Color(toText: .main))
             .frame(width: 315, height: 54)
             .background(Color(toElement: .progress))
@@ -30,10 +31,10 @@ struct Notification: View {
             
             .alert(isPresented: $showAlert, content: {
                 
-                Alert(title: Text("App would like to send You Notifications"),
-                      message: Text("Notifications may include aletrs, sounds and icon badges. These can be configured in Settings."),
-                      primaryButton: .destructive(Text("Allow")),
-                      secondaryButton: .cancel(Text("Don't Allow")))
+                Alert(title: Text("App would like to send You Notifications") .font(.custom("Inter-SemiBold", size: 17)) .foregroundColor(Color(toText: .main)),
+                      message: Text("Notifications may include aletrs, sounds and icon badges. These can be configured in Settings.") .font(.custom("Inter-Regular", size: 17)) .foregroundColor(Color(toText: .main)),
+                      primaryButton: .destructive(Text("Allow") .font(.custom("Inter-Regular", size: 17)) .foregroundColor(Color(toText: .txtblue))),
+                      secondaryButton: .cancel(Text("Don't Allow") .font(.custom("Inter-SemiBold", size: 17)) .foregroundColor(Color(toText: .txtblue))))
                 
             })
         }
