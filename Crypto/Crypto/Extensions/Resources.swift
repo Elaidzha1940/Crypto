@@ -22,7 +22,7 @@ extension Resources {
 
     enum Icon: String, AssetConvertable {
         
-        case some
+        case number
     }
 
     enum Categories: String, AssetConvertable {

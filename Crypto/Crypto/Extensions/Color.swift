@@ -16,7 +16,7 @@ internal extension Color {
     //MARK: Element
     //=============================================
     enum Element: String, AssetColor {
-        case bg, bgred, progress, tab, todo, trade, progressgrey, bgmain, push
+        case bg, bgred, progress, tab, todo, trade, progressgrey, bgmain, push, top
         
     }
     init(toElement option: Self.Element){

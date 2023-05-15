@@ -14,24 +14,17 @@ import SwiftUI
 struct BG: View {
     var body: some View {
         
-        
-        VStack {
-            Circle()
-                .frame(width: 123, height: 123)
-                .foregroundColor(Color(toElement: .progress))
-                .offset(x: 70, y: 50)
-                .padding()
+        ZStack {
             
-            Spacer()
-            
-            Circle()
-                .frame(width: 123, height: 123)
-                .foregroundColor(Color(toElement: .bgred))
-                .offset(x: -70, y: -50)
-                .padding()
-
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(RadialGradient(gradient: Gradient(colors: [Color(toElement: .progress), Color(toElement: .bgred)]),
+                                   center: .topTrailing, startRadius: 55, endRadius: 900))
+        
+        
+        //.background(Color(toElement: .bgmain))
     }
+        
 }
 
 struct BG_Previews: PreviewProvider {
