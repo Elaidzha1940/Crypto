@@ -28,8 +28,8 @@ struct Notification: View {
             .background(Color(toElement: .progress))
             .cornerRadius(12)
             
-            
             .alert(isPresented: $showAlert, content: {
+                
                 Alert(title: Text("App would like to send You Notifications"),
                       message: Text("Notifications may include aletrs, sounds and icon badges. These can be configured in Settings."),
                       primaryButton: .destructive(Text("Allow")),
