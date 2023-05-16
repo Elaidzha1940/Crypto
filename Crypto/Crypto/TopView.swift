@@ -17,13 +17,14 @@ struct TopView: View {
         VStack {
             
             Text("TOP 10 Traders ")
+                .font(.custom("Inter-Bold", size: 22))
                 .foregroundColor(Color(toText: .main))
-                .fontWeight(.bold)
             
             VStack {
                 HStack{
-
+                    
                     Image("icon-number")
+                       //.font(.custom("Inter-Medium", size: 12))
                         .padding()
                     
                     Text("Country")
@@ -31,7 +32,7 @@ struct TopView: View {
                     
                     Text("Name")
                         .padding()
-                    
+                                        
                     Text("Deposit")
                         .padding()
                     
@@ -41,10 +42,18 @@ struct TopView: View {
                 .background(Color(toElement: .todo))
                 .cornerRadius(13)
                 .frame(width: 450, height: 50)
+                .padding()
+
+            }
             
+            ScrollView {
+                VStack {
+                    ForEach(0 ..< 50, id: \.self) { _ in
+                        CountriesList()
+                    }
+                }
             }
         }
-        .background(Color(toElement: .top))
     }
 }
 

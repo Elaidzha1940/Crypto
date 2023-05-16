@@ -24,6 +24,7 @@
 		E4D378C32A123983008DB8A4 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4D378BF2A123983008DB8A4 /* README.txt */; };
 		E4D378C42A123983008DB8A4 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4D378C02A123983008DB8A4 /* OFL.txt */; };
 		E4D378C72A123B72008DB8A4 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D378C62A123B72008DB8A4 /* FontsManager.swift */; };
+		E4D378C92A1251EA008DB8A4 /* CountriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D378C82A1251EA008DB8A4 /* CountriesList.swift */; };
 		E4D3B1F82A110430002C2C08 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3B1F72A110430002C2C08 /* CryptoApp.swift */; };
 		E4D3B1FA2A110430002C2C08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3B1F92A110430002C2C08 /* ContentView.swift */; };
 		E4D3B1FC2A110430002C2C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D3B1FB2A110430002C2C08 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		E4D378C02A123983008DB8A4 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		E4D378C52A123A83008DB8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E4D378C62A123B72008DB8A4 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
+		E4D378C82A1251EA008DB8A4 /* CountriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesList.swift; sourceTree = "<group>"; };
 		E4D3B1F42A110430002C2C08 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D3B1F72A110430002C2C08 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		E4D3B1F92A110430002C2C08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D378BA2A112B4D008DB8A4 /* TopView.swift */,
+				E4D378C82A1251EA008DB8A4 /* CountriesList.swift */,
 			);
 			name = Top;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				E4D378AD2A110B83008DB8A4 /* BG.swift in Sources */,
 				E4D3789B2A110AD6008DB8A4 /* PreviewProviderOption.swift in Sources */,
 				E4D378A02A110B05008DB8A4 /* AssetConvertable.swift in Sources */,
+				E4D378C92A1251EA008DB8A4 /* CountriesList.swift in Sources */,
 				E4D378A32A110B28008DB8A4 /* Resources.swift in Sources */,
 				E4D378A72A110B42008DB8A4 /* Color.swift in Sources */,
 				E4D3789E2A110AFA008DB8A4 /* AssetColor.swift in Sources */,
