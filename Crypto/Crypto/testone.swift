@@ -9,19 +9,18 @@ import SwiftUI
 
 struct CrazyStyledListView: View {
     
-    @State private var healthyFoods = Top.goodExamples()
+    @State private var some = Top.goodExamples()
     //@State private var unhealthFoods = Food.unhealthyExamples()
     
     var body: some View {
         List {
             Section {
-                ForEach(healthyFoods) { food in
-                    Text("hhh")
-//                        Top(food: foo)
-                        .listRowBackground(Color(toElement: .bgmain))
+                ForEach(some) { list in
+//                    Top(list: )
+//                        .listRowBackground(Color(toElement: .bgmain))
                 }
             } header: {
-                Text("Fruits")
+                Text("TOP 10 Traders")
             }
             .listRowBackground(Color.blue)
             .foregroundColor(.black)
@@ -34,7 +33,9 @@ struct CrazystyleView_Previews: PreviewProvider {
         
         Group {
             CrazyStyledListView()
+                .listStyle(.automatic)
                 .previewDisplayName("CustomS")
+                
         }
     }
 }

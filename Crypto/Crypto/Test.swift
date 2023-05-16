@@ -10,15 +10,16 @@ import SwiftUI
 struct Top: Identifiable, Hashable {
     
     var name: String
+    var number: String
     var icon: String
-    var isFavorite: Bool
+    //var isFavorite: Bool
     var color: Color
     let id = UUID()
     
     static func goodExamples() -> [Top] {
-        return [Top(name: "Oliver", icon: "icon-states", isFavorite: true, color: Color(toElement: .bgmain)),
-                Top(name: "Oliver", icon: "icon-kingdom", isFavorite: false, color: Color(toElement: .push)),
-                Top(name: "Oliver", icon: "icon-india", isFavorite: false, color: Color(toElement: .bgmain))
+        return [Top(name: "Oliver", number: "1111", icon: "icon-states", color: Color(toElement: .bgmain)),
+                Top(name: "Oliver", number: "2222", icon: "icon-kingdom", color: Color(toElement: .push)),
+                Top(name: "Oliver", number: "3333", icon: "icon-india", color: Color(toElement: .bgmain))
         ]
     }
 }

@@ -16,7 +16,7 @@ struct TopView: View {
         
         VStack {
             
-            Text("TOP 10 Traders ")
+            Text("TOP 10 Traders")
                 .font(.custom("Inter-Bold", size: 22))
                 .foregroundColor(Color(toText: .main))
             
