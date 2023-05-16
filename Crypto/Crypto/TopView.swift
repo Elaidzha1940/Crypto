@@ -24,7 +24,6 @@ struct TopView: View {
                 HStack{
                     
                     Image("icon-number")
-                       //.font(.custom("Inter-Medium", size: 12))
                         .padding()
                     
                     Text("Country")

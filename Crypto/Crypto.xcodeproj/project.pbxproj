@@ -25,6 +25,8 @@
 		E4D378C42A123983008DB8A4 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4D378C02A123983008DB8A4 /* OFL.txt */; };
 		E4D378C72A123B72008DB8A4 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D378C62A123B72008DB8A4 /* FontsManager.swift */; };
 		E4D378C92A1251EA008DB8A4 /* CountriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D378C82A1251EA008DB8A4 /* CountriesList.swift */; };
+		E4D378CB2A136B1B008DB8A4 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D378CA2A136B1B008DB8A4 /* Test.swift */; };
+		E4D378CD2A136B42008DB8A4 /* testone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D378CC2A136B42008DB8A4 /* testone.swift */; };
 		E4D3B1F82A110430002C2C08 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3B1F72A110430002C2C08 /* CryptoApp.swift */; };
 		E4D3B1FA2A110430002C2C08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3B1F92A110430002C2C08 /* ContentView.swift */; };
 		E4D3B1FC2A110430002C2C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D3B1FB2A110430002C2C08 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		E4D378C52A123A83008DB8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E4D378C62A123B72008DB8A4 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
 		E4D378C82A1251EA008DB8A4 /* CountriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesList.swift; sourceTree = "<group>"; };
+		E4D378CA2A136B1B008DB8A4 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		E4D378CC2A136B42008DB8A4 /* testone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testone.swift; sourceTree = "<group>"; };
 		E4D3B1F42A110430002C2C08 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D3B1F72A110430002C2C08 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		E4D3B1F92A110430002C2C08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			children = (
 				E4D378BA2A112B4D008DB8A4 /* TopView.swift */,
 				E4D378C82A1251EA008DB8A4 /* CountriesList.swift */,
+				E4D378CA2A136B1B008DB8A4 /* Test.swift */,
+				E4D378CC2A136B42008DB8A4 /* testone.swift */,
 			);
 			name = Top;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			files = (
 				E4D3B1FA2A110430002C2C08 /* ContentView.swift in Sources */,
 				E4D378A52A110B33008DB8A4 /* PreviewProvider.swift in Sources */,
+				E4D378CB2A136B1B008DB8A4 /* Test.swift in Sources */,
 				E4D378C72A123B72008DB8A4 /* FontsManager.swift in Sources */,
 				E4D378AD2A110B83008DB8A4 /* BG.swift in Sources */,
 				E4D3789B2A110AD6008DB8A4 /* PreviewProviderOption.swift in Sources */,
@@ -290,6 +297,7 @@
 				E4D378C92A1251EA008DB8A4 /* CountriesList.swift in Sources */,
 				E4D378A32A110B28008DB8A4 /* Resources.swift in Sources */,
 				E4D378A72A110B42008DB8A4 /* Color.swift in Sources */,
+				E4D378CD2A136B42008DB8A4 /* testone.swift in Sources */,
 				E4D3789E2A110AFA008DB8A4 /* AssetColor.swift in Sources */,
 				E4D378B92A111D62008DB8A4 /* Notification.swift in Sources */,
 				E4D378AF2A110BA3008DB8A4 /* ProgressBar.swift in Sources */,
