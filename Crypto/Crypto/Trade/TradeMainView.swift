@@ -12,6 +12,7 @@
 import SwiftUI
 
 struct TradeMainView: View {
+        
     var body: some View {
         
         VStack {
@@ -42,6 +43,7 @@ struct TradeMainView: View {
                             .foregroundColor(Color(toElement: .trade))
                             .cornerRadius(12)
                     )
+                    
                 }
             }
             .ignoresSafeArea(.all)
