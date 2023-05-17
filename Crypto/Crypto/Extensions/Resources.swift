@@ -17,7 +17,7 @@ extension Resources {
 
     enum System: String, AssetConvertable {
 
-        case tabvawe, personhead, personbody
+        case tabvawe, personhead, personbody, chevronright
     }
 
     enum Icon: String, AssetConvertable {
