@@ -12,7 +12,7 @@
 import SwiftUI
 
 struct TradeMainView: View {
-        
+    
     var body: some View {
         
         VStack {
@@ -56,7 +56,7 @@ struct TradeMainView: View {
                                     .foregroundColor(Color(toText: .main))
                                     .padding(.horizontal, 90)
                                 Image("system-chevronright")
-
+                                
                             }
                             .background(
                                 Rectangle()
@@ -65,6 +65,7 @@ struct TradeMainView: View {
                                     .cornerRadius(12)
                             )
                         }
+                        
                         HStack {
                             Spacer()
                             VStack {
@@ -73,18 +74,19 @@ struct TradeMainView: View {
                                     .foregroundColor(Color(toText: .balance))
                                     .padding(-1)
                                 
-                                Text("- 00:02 +")
+                                Text(" - 00:02 + ")
                                     .font(.custom("Inter-Bold", size: 16))
                                     .foregroundColor(Color(toText: .main))
                                     .padding(-1)
                             }
                             .background(
                                 Rectangle()
-                                    .frame(width: 150, height: 54)
+                                    .frame(width: 152, height: 54)
                                     .foregroundColor(Color(toElement: .trade))
                                     .cornerRadius(12)
                             )
                             .padding()
+                            
                             Spacer()
                             
                             VStack {
@@ -93,25 +95,62 @@ struct TradeMainView: View {
                                     .foregroundColor(Color(toText: .balance))
                                     .padding(-1)
                                 
-                                Text("1,000")
+                                Text(" - 1,000 + ")
                                     .font(.custom("Inter-Bold", size: 16))
                                     .foregroundColor(Color(toText: .main))
                                     .padding(-1)
                             }
                             .background(
                                 Rectangle()
-                                    .frame(width: 150, height: 54)
+                                    .frame(width: 152, height: 54)
                                     .foregroundColor(Color(toElement: .trade))
                                     .cornerRadius(12)
                             )
                             .padding()
+                            
                             Spacer()
                         }
-                        .padding(.top, 10)
+                        .padding()
+                        
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Text("Sell")
+                                    .font(.custom("Inter-Medium", size: 24))
+                                    .foregroundColor(Color(toText: .main))
+                                    .offset(x: -45, y:  -7)
+
+                            }
+                            .background(
+                                Rectangle()
+                                    .frame(width: 152, height: 54)
+                                    .foregroundColor(Color(toElement: .bgred))
+                                    .cornerRadius(12)
+                            )
+                            .padding()
+                            
+                         Spacer()
+                            
+                            VStack {
+                                Text("Buy")
+                                    .font(.custom("Inter-Medium", size: 24))
+                                    .foregroundColor(Color(toText: .main))
+                                    .offset(x: -45, y:  -7)
+
+                            }
+                            .background(
+                                Rectangle()
+                                    .frame(width: 152, height: 54)
+                                    .foregroundColor(Color(toElement: .progress))
+                                    .cornerRadius(12)
+                            )
+                            .padding()
+                            
+                            Spacer()
+                        }
                     }
-                    Spacer()
-                    
                 }
+                .padding(.bottom, 20)
             }
             .ignoresSafeArea(.all)
         }
