@@ -17,6 +17,7 @@ struct TradeMainView: View {
         
         VStack {
             Spacer()
+            
             ZStack {
                 Color(toElement: .trademain)
                 
@@ -39,7 +40,7 @@ struct TradeMainView: View {
                     }
                     .background(
                         Rectangle()
-                            .frame(width: 315, height: 54)
+                            .frame(width: 320, height: 54)
                             .foregroundColor(Color(toElement: .trade))
                             .cornerRadius(12)
                     )
@@ -60,7 +61,7 @@ struct TradeMainView: View {
                             }
                             .background(
                                 Rectangle()
-                                    .frame(width: 315, height: 54)
+                                    .frame(width: 320, height: 54)
                                     .foregroundColor(Color(toElement: .trade))
                                     .cornerRadius(12)
                             )
@@ -68,11 +69,10 @@ struct TradeMainView: View {
                         
                         HStack {
                             Spacer()
-                            VStack {
+                            VStack(alignment: .center, spacing: 8) {
                                 Text("Timer")
                                     .font(.custom("Inter-Medium", size: 12))
                                     .foregroundColor(Color(toText: .balance))
-                                    .padding(-1)
                                 
                                 Text(" - 00:02 + ")
                                     .font(.custom("Inter-Bold", size: 16))
@@ -89,16 +89,14 @@ struct TradeMainView: View {
                             
                             Spacer()
                             
-                            VStack {
+                            VStack(alignment: .center, spacing: 8) {
                                 Text("Investment")
                                     .font(.custom("Inter-Medium", size: 12))
                                     .foregroundColor(Color(toText: .balance))
-                                    .padding(-1)
                                 
                                 Text(" - 1,000 + ")
                                     .font(.custom("Inter-Bold", size: 16))
                                     .foregroundColor(Color(toText: .main))
-                                    .padding(-1)
                             }
                             .background(
                                 Rectangle()
@@ -115,39 +113,48 @@ struct TradeMainView: View {
                         HStack {
                             Spacer()
                             VStack {
-                                Text("Sell")
-                                    .font(.custom("Inter-Medium", size: 24))
-                                    .foregroundColor(Color(toText: .main))
-                                    .offset(x: -45, y:  -7)
-
+                                
+                                Button {
+                                    //action
+                                } label: {
+                                    Text("Sell")
+                                        .font(.custom("Inter-Medium", size: 24))
+                                        .foregroundColor(Color(toText: .main))
+                                        .offset(x: -45, y:  -7)
+                                }
+                                .background(
+                                    Rectangle()
+                                        .frame(width: 152, height: 54)
+                                        .foregroundColor(Color(toElement: .bgred))
+                                        .cornerRadius(12)
+                                )
+                                .padding()
                             }
-                            .background(
-                                Rectangle()
-                                    .frame(width: 152, height: 54)
-                                    .foregroundColor(Color(toElement: .bgred))
-                                    .cornerRadius(12)
-                            )
-                            .padding()
                             
-                         Spacer()
+                            Spacer()
                             
                             VStack {
-                                Text("Buy")
-                                    .font(.custom("Inter-Medium", size: 24))
-                                    .foregroundColor(Color(toText: .main))
-                                    .offset(x: -45, y:  -7)
-
+                                
+                                Button {
+                                    //action
+                                } label: {
+                                    Text("Buy")
+                                        .font(.custom("Inter-Medium", size: 24))
+                                        .foregroundColor(Color(toText: .main))
+                                        .offset(x: -45, y:  -7)
+                                }
+                                .background(
+                                    Rectangle()
+                                        .frame(width: 152, height: 54)
+                                        .foregroundColor(Color(toElement: .progress))
+                                        .cornerRadius(12)
+                                )
+                                .padding()
                             }
-                            .background(
-                                Rectangle()
-                                    .frame(width: 152, height: 54)
-                                    .foregroundColor(Color(toElement: .progress))
-                                    .cornerRadius(12)
-                            )
-                            .padding()
                             
                             Spacer()
                         }
+                        .offset(y: -25)
                     }
                 }
                 .padding(.bottom, 20)

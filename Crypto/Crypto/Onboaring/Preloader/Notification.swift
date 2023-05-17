@@ -25,7 +25,7 @@ struct Notification: View {
             }
             .font(.custom("Inter-Bold", size: 18))
             .foregroundColor(Color(toText: .main))
-            .frame(width: 315, height: 54)
+            .frame(width: 320, height: 54)
             .background(Color(toElement: .progress))
             .cornerRadius(12)
             
