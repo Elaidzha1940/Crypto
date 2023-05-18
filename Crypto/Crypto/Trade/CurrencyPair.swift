@@ -22,10 +22,65 @@ struct CurrencyPair: View {
                 Text("Currency pair")
                     .font(.custom("Inter-Bold", size: 22))
                     .foregroundColor(Color(toText: .main))
+                Spacer()
                 
                 VStack {
-                    //LazyVGrid
                     
+                    HStack(spacing: 70) {
+                        VStack {
+                            Text("EUR/USD")
+                                .font(.custom("Inter-SemiBold", size: 14))
+                                .foregroundColor(Color(toText: .balance))
+                        }
+                        .background(
+                            Rectangle()
+                                .frame(width: 152, height: 54)
+                                .foregroundColor(Color(toElement: .trade))
+                                .cornerRadius(12)
+                        )
+                        .padding()
+                        
+                        VStack(alignment: .center, spacing: 8) {
+                            Text("EUR/USD")
+                                .font(.custom("Inter-SemiBold", size: 14))
+                                .foregroundColor(Color(toText: .balance))
+                        }
+                        .background(
+                            Rectangle()
+                                .frame(width: 152, height: 54)
+                                .foregroundColor(Color(toElement: .trade))
+                                .cornerRadius(12)
+                        )
+                        .padding()
+                    }
+                    
+                    HStack(spacing: 70) {
+                        VStack {
+                            Text("EUR/USD")
+                                .font(.custom("Inter-SemiBold", size: 14))
+                                .foregroundColor(Color(toText: .balance))
+                        }
+                        .background(
+                            Rectangle()
+                                .frame(width: 152, height: 54)
+                                .foregroundColor(Color(toElement: .trade))
+                                .cornerRadius(12)
+                        )
+                        .padding()
+                        
+                        VStack(alignment: .center, spacing: 8) {
+                            Text("EUR/USD")
+                                .font(.custom("Inter-SemiBold", size: 14))
+                                .foregroundColor(Color(toText: .balance))
+                        }
+                        .background(
+                            Rectangle()
+                                .frame(width: 152, height: 54)
+                                .foregroundColor(Color(toElement: .trade))
+                                .cornerRadius(12)
+                        )
+                        .padding()
+                    }
                 }
             }
         }

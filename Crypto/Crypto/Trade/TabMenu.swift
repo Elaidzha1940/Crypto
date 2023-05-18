@@ -17,30 +17,25 @@ struct TabMenu: View {
     
     var body: some View {
         
-        VStack {
+        TabView(selection: $selection) {
             
-            TabView(selection: $selection) {
-                
-                TradeMainView()
-                    .tabItem {
-                        Image("system-tabvawe")
-                        Text("Trade")
-                    }
-                
-                CurrencyPair()
-                    .tabItem {
-                        Image("system-person")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 12)
-                        Text("Top")
-                            .font(.custom("Itner-SemiBold", size: 10))
-                    }
-                
-            }
-            .accentColor(Color(toElement: .progress))
+            TradeMainView()
+                .tabItem {
+                    Image("system-tabvawe")
+                    Text("Trade")
+                        .font(.custom("Itner-SemiBold", size: 10))
+                }
             
+            CurrencyPair()
+                .tabItem {
+                    Image("system-person")
+                    
+                    Text("Top")
+                        .font(.custom("Itner-SemiBold", size: 10))
+                }
         }
+        .accentColor(Color(toElement: .progress))
+        
     }
 }
 
