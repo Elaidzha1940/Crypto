@@ -16,8 +16,6 @@ struct TradeMainView: View {
     var body: some View {
         
         VStack {
-            Spacer()
-            
             ZStack {
                 Color(toElement: .trademain)
                 
@@ -45,7 +43,11 @@ struct TradeMainView: View {
                             .cornerRadius(12)
                     )
                     
-                    Spacer()
+                   // Spacer()
+                    
+                    Rectangle()
+                        .frame(width: 450, height: 450)
+                        .padding()
                     
                     VStack(alignment: .center) {
                         HStack {
@@ -67,9 +69,8 @@ struct TradeMainView: View {
                             )
                         }
                         
-                        HStack {
-                            Spacer()
-                            VStack(alignment: .center, spacing: 8) {
+                        HStack(spacing: 65) {
+                            VStack {
                                 Text("Timer")
                                     .font(.custom("Inter-Medium", size: 12))
                                     .foregroundColor(Color(toText: .balance))
@@ -86,8 +87,6 @@ struct TradeMainView: View {
                                     .cornerRadius(12)
                             )
                             .padding()
-                            
-                            Spacer()
                             
                             VStack(alignment: .center, spacing: 8) {
                                 Text("Investment")
@@ -106,14 +105,11 @@ struct TradeMainView: View {
                             )
                             .padding()
                             
-                            Spacer()
                         }
                         .padding()
                         
-                        HStack {
-                            Spacer()
+                        HStack(spacing: 125) {
                             VStack {
-                                
                                 Button {
                                     //action
                                 } label: {
@@ -128,13 +124,9 @@ struct TradeMainView: View {
                                         .foregroundColor(Color(toElement: .bgred))
                                         .cornerRadius(12)
                                 )
-                                .padding()
                             }
                             
-                            Spacer()
-                            
                             VStack {
-                                
                                 Button {
                                     //action
                                 } label: {
@@ -149,18 +141,14 @@ struct TradeMainView: View {
                                         .foregroundColor(Color(toElement: .progress))
                                         .cornerRadius(12)
                                 )
-                                .padding()
                             }
-                            
-                            Spacer()
                         }
-                        .offset(y: -25)
+                        .offset(y: -10)
                     }
                 }
-                .padding(.bottom, 20)
             }
-            .ignoresSafeArea(.all)
         }
+        .ignoresSafeArea(.all)
     }
 }
 

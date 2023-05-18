@@ -12,20 +12,24 @@
 import SwiftUI
 
 struct CurrencyPair: View {
+    
     var body: some View {
         
         VStack {
-            
             ZStack {
                 Color(toElement: .trademain)
                 
                 Text("Currency pair")
                     .font(.custom("Inter-Bold", size: 22))
                     .foregroundColor(Color(toText: .main))
+                
+                VStack {
+                    //LazyVGrid
+                    
+                }
             }
-            .ignoresSafeArea(.all)
-            
         }
+        .ignoresSafeArea(.all)
     }
 }
 
