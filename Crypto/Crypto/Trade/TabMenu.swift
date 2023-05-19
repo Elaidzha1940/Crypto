@@ -13,25 +13,24 @@ import SwiftUI
 
 struct TabMenu: View {
     
-    @State private var selection: String = "Trade"
+    @State private var selected: String = "Trade"
     
     var body: some View {
         
-        TabView(selection: $selection) {
+        TabView(selection: $selected) {
             
             TradeMainView()
                 .tabItem {
                     Image("system-tabvawe")
+                    
                     Text("Trade")
-                        .font(.custom("Itner-SemiBold", size: 10))
                 }
             
             CurrencyPair()
                 .tabItem {
                     Image("system-person")
-                    
+                       
                     Text("Top")
-                        .font(.custom("Itner-SemiBold", size: 10))
                 }
         }
         .accentColor(Color(toElement: .progress))

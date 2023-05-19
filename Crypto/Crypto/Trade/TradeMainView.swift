@@ -47,6 +47,7 @@ struct TradeMainView: View {
                     
                     Rectangle()
                         .frame(width: 450, height: 450)
+                        .foregroundColor(Color(toElement: .bgred))
                         .padding()
                     
                     VStack(alignment: .center) {
