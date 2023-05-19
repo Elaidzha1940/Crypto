@@ -11,113 +11,61 @@
 
 import SwiftUI
 
+struct ButtonData {
+    let id = UUID()
+    let title: String
+    var isSelected = false
+}
+
 struct CurrencyPair: View {
     
-    @State private var buttonColors: [Color] = [
-            Color.red, Color.blue, Color.green, Color.yellow, Color.orange
-        ]
+    @State private var buttons: [ButtonData] = [
+        ButtonData(title: "EUR/USD"),
+        ButtonData(title: "EUR/USD"),
+        ButtonData(title: "EUR/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "EUR/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD"),
+        ButtonData(title: "GPB/USD")
+    ]
     
     var body: some View {
         
-        VStack {
-            ZStack {
-                Color(toElement: .trademain)
-                
-                Text("Currency pair")
-                    .font(.custom("Inter-Bold", size: 22))
-                    .foregroundColor(Color(toText: .main))
-                Spacer()
-                
-                LazyVGrid(columns: createGrid()) {
-                         ForEach(0..<buttonColors.count) { index in
-                             Button(action: {
-                                 // Change the color of the tapped button
-                                 buttonColors[index] = getRandomColor()
-                             }) {
-                                 RoundedRectangle(cornerRadius: 10)
-                                     .fill(buttonColors[index])
-                                     .frame(height: 100)
-                             }
-                         }
-                     }
-                     .padding()
-                 }
-                 
-                 // Function to generate a random color
-                 private func getRandomColor() -> Color {
-                     let randomRed = Double.random(in: 0...1)
-                     let randomGreen = Double.random(in: 0...1)
-                     let randomBlue = Double.random(in: 0...1)
-                     return Color(red: randomRed, green: randomGreen, blue: randomBlue)
-                 }
-                 
-                 // Function to create grid columns
-                 private func createGrid() -> [GridItem] {
-                     let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
-                     return gridItemLayout
-                 }
-             }
-                
-//                VStack {
-//
-//                    HStack(spacing: 70) {
-//                        VStack {
-//                            Text("EUR/USD")
-//                                .font(.custom("Inter-SemiBold", size: 14))
-//                                .foregroundColor(Color(toText: .balance))
-//                        }
-//                        .background(
-//                            Rectangle()
-//                                .frame(width: 152, height: 54)
-//                                .foregroundColor(Color(toElement: .trade))
-//                                .cornerRadius(12)
-//                        )
-//                        .padding()
-//
-//                        VStack(alignment: .center, spacing: 8) {
-//                            Text("EUR/USD")
-//                                .font(.custom("Inter-SemiBold", size: 14))
-//                                .foregroundColor(Color(toText: .balance))
-//                        }
-//                        .background(
-//                            Rectangle()
-//                                .frame(width: 152, height: 54)
-//                                .foregroundColor(Color(toElement: .trade))
-//                                .cornerRadius(12)
-//                        )
-//                        .padding()
-//                    }
+        NavigationView {
+            VStack {
+                ZStack {
+                    Color(toElement: .trademain)
                     
-//                    HStack(spacing: 70) {
-//                        VStack {
-//                            Text("EUR/USD")
-//                                .font(.custom("Inter-SemiBold", size: 14))
-//                                .foregroundColor(Color(toText: .balance))
-//                        }
-//                        .background(
-//                            Rectangle()
-//                                .frame(width: 152, height: 54)
-//                                .foregroundColor(Color(toElement: .trade))
-//                                .cornerRadius(12)
-//                        )
-//                        .padding()
-//
-//                        VStack(alignment: .center, spacing: 8) {
-//                            Text("EUR/USD")
-//                                .font(.custom("Inter-SemiBold", size: 14))
-//                                .foregroundColor(Color(toText: .balance))
-//                        }
-//                        .background(
-//                            Rectangle()
-//                                .frame(width: 152, height: 54)
-//                                .foregroundColor(Color(toElement: .trade))
-//                                .cornerRadius(12)
-//                        )
-//                        .padding()
-                //}
+                    LazyVGrid(columns: createGrid()) {
+                        
+                        ForEach(buttons.indices) { index in
+                            Button(action: {
+                                buttons[index].isSelected.toggle()
+                            }) {
+                                Text(buttons[index].title)
+                                    .font(.custom("Inter-SemiBold", size: 14))
+                                    .frame(width: 140, height: 54)
+                                    .foregroundColor(buttons[index].isSelected ? Color(toText: .main) : Color(toText: .main))
+                                    .padding()
+                                    .background(buttons[index].isSelected ? Color(toElement: .progress) : Color(toElement: .trade))
+                                    .cornerRadius(12)
+                            }
+                        }
+                    }
+                    .padding(.top, 40)
+                }
             }
+            .ignoresSafeArea(.all)
+            .navigationTitle("Currency pair")
+            
         }
-        .ignoresSafeArea(.all)
     }
 }
 
@@ -128,3 +76,10 @@ struct CurrencyPair_Previews: PreviewProvider {
         }
     }
 }
+
+private func createGrid() -> [GridItem] {
+    let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    return gridItemLayout
+    
+}
+
